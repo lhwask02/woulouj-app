@@ -1,0 +1,117 @@
+<form method="post" class="container">
+  <div class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center mb-5">
+      Ajouter Enseignant
+    </h1>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="col-md-1 col-sm-12 col-xs-12"></div>
+        <div class="col-md-9 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <label class="fw-bold">Nom:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-user icon"></i
+                  ></span>
+                  <input type="text" class="form-control" placeholder="Nom" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <label class="fw-bold">Prenom:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-user icon"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Prenom"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <label class="fw-bold">N° Tel:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-phone icon"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="N° Tel"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <label class="fw-bold">Email:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-envelope icon"></i
+                  ></span>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <label class="fw-bold">Salaire de Base:</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"
+                  ><i class="fa fa-money icon"></i
+                ></span>
+                <input type="text" class="form-control" placeholder="Salaire" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12 col-xs-12">
+          <div class="text-center">
+            <div id="Picture ">
+              <img
+                class="img-fluid"
+                src="../../../../assets/img/imgsys/scheduleBackground.png"
+                alt="Pict"
+              />
+              <div class="" id="Load">
+                <div class="Sel"><i class="fa fa-camera icon" id=""></i></div>
+                <div class="Sel">
+                  <input
+                    class="btn btn-primary"
+                    type="button"
+                    value="Choisir image"
+                    onclick="document.getElementById('selectedFile').click();"
+                  />
+                </div>
+                <input
+                  type="file"
+                  id="selectedFile"
+                  style="display: none"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center mt-3">
+      <input type="submit" value="Ajouter" class="btn btn-primary" />
+    </div>
+  </div>
+</form>

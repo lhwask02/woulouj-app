@@ -1,0 +1,67 @@
+<form method="" class="container justify-content-center">
+  <div class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 my-3 text-center">
+      Gerer les Programmes
+    </h1>
+    <div class="inpt col-md-6 col-sm-12 col-xs-12 my-3">
+      <label class="fw-bold">Intitule:</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="">
+          <i class="fa fa-tag icon"></i>
+        </span>
+        <input
+          (keyup)="Intitule($event)"
+          type="text"
+          class="form-control"
+          placeholder="Intitule"
+        />
+      </div>
+    </div>
+    <div class="inpt col-md-6 col-sm-12 col-xs-12 my-3">
+      <label class="fw-bold">Tarif:</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="">
+          <i class="fa fa-money icon"></i>
+        </span>
+        <input
+          (keyup)="Tarif($event)"
+          type="text"
+          class="form-control"
+          placeholder="Tarif"
+        />
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 my-3">
+      <div id="list_Cours" class="row m-1 p-2">
+        <div
+          class="CourCarte col-md-3 col-sm-12 col-xs-12 p-1 m-1"
+          *ngFor="let cour of listcoursfilter"
+        >
+          <p>{{ cour.Matier }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12 ms-0">
+      <div id="divAddCour" class="">
+        <input
+          (keyup)="Filter($event)"
+          type="text"
+          placeholder="Ajouter Module"
+        />
+        <img
+          src="../../../assets/img/imgsys/icons/addentry.png"
+          (click)="Ajouter()"
+        />
+      </div>
+    </div>
+    <div class="col-md-9 col-sm-12 col-xs-12"></div>
+    <div class="col-md-12 col-sm-12 col-xs-12 mt-3">
+      <input
+        (click)="Enregistrer()"
+        type="submit"
+        class="btn btn-primary"
+        value="Enregistrer"
+      />
+    </div>
+  </div>
+</form>

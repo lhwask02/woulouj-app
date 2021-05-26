@@ -1,0 +1,138 @@
+<form method="post" class="container">
+  <div class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center mb-5">
+      List Enseignant
+    </h1>
+    <!-- <div class="col-md-2 col-sm-12 col-xs-12"></div> -->
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <label class="fw-bold">Matricule:</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-id-card icon"></i>
+        </span>
+        <input
+          (keyup)="UpdateFilters($event)"
+          type="text"
+          class="form-control"
+          placeholder="Matricule"
+        />
+      </div>
+    </div>
+    <!-- <div class="col-md-2 col-sm-12 col-xs-12"></div> -->
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <label class="fw-bold">Nom:</label>
+      <div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-user icon"></i
+          ></span>
+          <input
+            (keyup)="UpdateFilters($event)"
+            type="text"
+            class="form-control"
+            placeholder="Nom"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-12 col-sm-12 col-xs-12"></div> -->
+    <!-- <div class="col-md-2 col-sm-12 col-xs-12"></div> -->
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <label class="fw-bold">N° Tel:</label>
+      <div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-phone icon"></i
+          ></span>
+          <input
+            (keyup)="UpdateFilters($event)"
+            type="text"
+            class="form-control"
+            placeholder="N° Tel"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-2 col-sm-12 col-xs-12"></div> -->
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <label class="fw-bold">Email:</label>
+      <div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-envelope icon"></i
+          ></span>
+          <input
+            (keyup)="UpdateFilters($event)"
+            type="email"
+            class="form-control"
+            placeholder="Email"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-12 col-sm-12 col-xs-12"></div> -->
+    <!-- <div class="col-md-5 col-sm-12 col-xs-12 text-center mb-3"></div> -->
+    <div class="col-md-6 col-sm-12 col-xs-12 text-center mb-3">
+      <div (click)="Filter()" class="btn btn-primary">Rechercher</div>
+    </div>
+    <!-- <div class="col-md-12 col-sm-12 col-xs-12"></div>
+        <div class="col-md-2 col-sm-12 col-xs-12"></div> -->
+    <div id="tabl" class="col-md-12 col-sm-12 col-xs-12">
+      <!-- table-striped table-hover -->
+      <table class="table">
+        <tr>
+          <th>Photo</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Matricule</th>
+          <th>Email</th>
+          <th>Tel</th>
+          <th>Fiche</th>
+          <th>Supprimer</th>
+        </tr>
+        <tr *ngFor="let ens of listEnseignantfilter">
+          <td>
+            <img class="img-rounded" src=" {{ ens.Imgsrc }}" />
+          </td>
+          <td>{{ ens.Nom }}</td>
+          <td>{{ ens.Prenom }}</td>
+          <td>{{ ens.Matricule }}</td>
+          <td>{{ ens.Email }}</td>
+          <td>{{ ens.N_Tel }}</td>
+          <td>
+            <img
+              (click)="Affichier(ens.Matricule)"
+              src="../../../assets/img/imgsys/icons/pdf.png"
+            />
+          </td>
+          <td>
+            <img
+              (click)="Supprimer(ens.Matricule)"
+              src="../../../assets/img/imgsys/icons/delete.png"
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <img src="../../../assets/img/imgsys/icons/pdf.png" />
+    </div>
+    <div>
+      <img src="../../../assets/img/imgsys/icons/xls.png" />
+    </div>
+
+    <!-- <div class="col-md-12 col-sm-12 col-xs-12"></div> -->
+  </div>
+  <!-- <ul class="pagination">
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+      </ul>
+      <ul class="pager">
+        <li class="previous"><a href="#">Previous</a></li>
+        <li class="next"><a href="#">Next</a></li>
+      </ul> -->
+</form>
